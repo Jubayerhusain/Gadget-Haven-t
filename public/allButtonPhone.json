@@ -7,52 +7,26 @@
         "color": "Black",
         "price": 29,
         "release_date": "2019-08-01",
-        "img": "https://example.com/nokia_105.jpg",
+        "img": "https://i.ibb.co/4TwvNrT/nokia-150-2023-3.jpg",
         "description": "The Nokia 105 is a simple and reliable phone with a long battery life and classic design.",
         "category": "Button Phone",
         "rating": 4.5
     },
     {
         "id": 2,
-        "brand": "Samsung",
-        "model": "Galaxy A01 Core",
-        "storage": "16GB",
-        "color": "Blue",
-        "price": 79,
-        "release_date": "2020-07-01",
-        "img": "https://example.com/samsung_a01_core.jpg",
-        "description": "Samsung Galaxy A01 Core features a user-friendly interface with essential smartphone functionalities.",
-        "category": "Button Phone",
-        "rating": 4.2
-    },
-    {
-        "id": 3,
         "brand": "Alcatel",
         "model": "OneTouch 2051X",
         "storage": "4MB",
         "color": "Red",
         "price": 25,
         "release_date": "2019-05-15",
-        "img": "https://example.com/alcatel_2051x.jpg",
+        "img": "https://i.ibb.co/RYCFPpt/Alcatel.jpg",
         "description": "The Alcatel OneTouch 2051X is a lightweight and easy-to-use phone with a large keypad.",
         "category": "Button Phone",
         "rating": 4.0
     },
     {
-        "id": 4,
-        "brand": "Motorola",
-        "model": "Moto G Play (2021)",
-        "storage": "32GB",
-        "color": "Gray",
-        "price": 139,
-        "release_date": "2021-01-07",
-        "img": "https://example.com/motorola_moto_g_play.jpg",
-        "description": "The Moto G Play offers a good balance of features and price, perfect for basic phone users.",
-        "category": "Button Phone",
-        "rating": 4.1
-    },
-    {
-        "id": 5,
+        "id": 3,
         "brand": "Lava",
         "model": "A1",
         "storage": "4MB",
@@ -65,20 +39,7 @@
         "rating": 4.3
     },
     {
-        "id": 6,
-        "brand": "Gionee",
-        "model": "GN5005",
-        "storage": "16GB",
-        "color": "Gold",
-        "price": 89,
-        "release_date": "2018-09-12",
-        "img": "https://example.com/gionee_gn5005.jpg",
-        "description": "Gionee GN5005 is a budget-friendly phone that combines basic features with good performance.",
-        "category": "Button Phone",
-        "rating": 4.0
-    },
-    {
-        "id": 7,
+        "id": 4,
         "brand": "itel",
         "model": "it5611",
         "storage": "4MB",
@@ -91,20 +52,7 @@
         "rating": 4.2
     },
     {
-        "id": 8,
-        "brand": "ZTE",
-        "model": "Blade A3",
-        "storage": "16GB",
-        "color": "Black",
-        "price": 100,
-        "release_date": "2020-06-18",
-        "img": "https://example.com/zte_blade_a3.jpg",
-        "description": "ZTE Blade A3 features a large display and essential smartphone features for casual users.",
-        "category": "Button Phone",
-        "rating": 4.0
-    },
-    {
-        "id": 9,
+        "id": 5,
         "brand": "Micromax",
         "model": "X409",
         "storage": "4MB",
@@ -117,7 +65,7 @@
         "rating": 4.3
     },
     {
-        "id": 10,
+        "id": 6,
         "brand": "Intex",
         "model": "Eco 102",
         "storage": "4MB",

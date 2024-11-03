@@ -7,14 +7,15 @@ function Home() {
     return (
         <div className=''>
             <Banner></Banner>
-            this is product container
-            <div>
+            <div className='flex justify-between my-14'>
                 {/* nav categories  */}
                 <div>
                     <Categories categories={categories}></Categories>
                 </div>
                 {/* product view section  */}
-                <div></div>
+                <div>
+                    this is product view container
+                </div>
             </div>
         </div>
     )
