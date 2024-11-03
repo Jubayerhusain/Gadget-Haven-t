@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "category": "Button Phone",
+      "slug": "button-phone"
+    },
+    {
+      "id": 2,
+      "category": "Charger",
+      "slug": "charger"
+    },
+    {
+      "id": 3,
+      "category": "Headphone",
+      "slug": "headphone"
+    },
+    {
+      "id": 4,
+      "category": "Laptop",
+      "slug": "laptop"
+    },
+    {
+      "id": 5,
+      "category": "Power Bank",
+      "slug": "power-bank"
+    },
+    {
+      "id": 6,
+      "category": "Smartphone",
+      "slug": "smartphone"
+    },
+    {
+      "id": 6,
+      "category": "Smartwatch",
+      "slug": "smartwatch"
+    }
+  ]
+  

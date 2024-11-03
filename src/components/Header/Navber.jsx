@@ -10,7 +10,7 @@ function Navber() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-white bold underline" : "text-white"
+            isActive ? "text-white font-bold underline" : "text-white"
           }
         >
           {" "}
@@ -21,7 +21,7 @@ function Navber() {
         <NavLink
           to="/Statistics"
           className={({ isActive }) =>
-            isActive ? "text-white bold underline" : "text-white"
+            isActive ? "text-white font-bold underline" : "text-white"
           }
         >
           {" "}
@@ -32,7 +32,7 @@ function Navber() {
         <NavLink
           to="/dashboard"
           className={({ isActive }) =>
-            isActive ? "text-white bold underline" : "text-white"
+            isActive ? "text-white font-bold underline" : "text-white"
           }
         >
           {" "}
