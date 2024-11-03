@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom"
 import ProductCart from "../ProductCart/ProductCart";
 import { useEffect, useState } from "react";
