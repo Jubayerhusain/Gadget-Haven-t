@@ -14,7 +14,7 @@ function Categories({ categories }) {
               `text-xl border-2 rounded-3xl text-center py-2 px-3 block ${
                 isActive
                   ? "text-white bg-purple-700"
-                  : "text-gray-800 bg-gray-300"
+                  : "text-gray-800 bg-gray-200"
               }`
             }
           >
@@ -29,7 +29,7 @@ function Categories({ categories }) {
                 `text-xl border-2 rounded-3xl text-center py-2 px-3 block ${
                   isActive
                     ? "text-white bg-purple-700"
-                    : "text-gray-800 bg-gray-300"
+                    : "text-gray-800 bg-gray-200"
                 }`
               }
             >
