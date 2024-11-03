@@ -2,6 +2,7 @@
 import { useLoaderData } from 'react-router-dom';
 import Banner from './../Header/Banner';
 import Categories from './../Categories/Categories';
+import AllProduct from './../AllProduct/AllProducts';
 function Home() {
     const categories = useLoaderData()
     return (
@@ -14,7 +15,7 @@ function Home() {
                 </div>
                 {/* product view section  */}
                 <div>
-                    this is product view container
+                    <AllProduct></AllProduct>
                 </div>
             </div>
         </div>

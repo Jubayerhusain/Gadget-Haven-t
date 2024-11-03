@@ -6,29 +6,36 @@ function Categories({ categories }) {
   console.log(categories.category);
   return (
     <div>
-      <ul className="space-x-4 flex-col border-2 rounded-xl p-5">
-        <NavLink to="/category"
-        className={({ isActive }) =>
-            `text-xl ${isActive ? "text-red-500" : ""}`
-          }
-        >
-
-          <p className="border-2 rounded-3xl text-center py-2 px-3">
-            All Product
-          </p>
-        </NavLink>
-        {categories.map((category) => (
+      <ul className="space-y-5 border-2 rounded-xl p-8">
+        <li>
           <NavLink
-            to={`/category`}
-            key={category.category}
+            to="./AllProduct"
             className={({ isActive }) =>
-              `text-xl ${isActive ? "text-red-500" : ""}`
+              `text-xl border-2 rounded-3xl text-center py-2 px-3 block ${
+                isActive
+                  ? "text-white bg-purple-700"
+                  : "text-gray-800 bg-gray-300"
+              }`
             }
           >
-            <p className="border-2 rounded-3xl text-center py-2 px-3">
-              {category.category}
-            </p>
+            All Product
           </NavLink>
+        </li>
+        {categories.map((category) => (
+          <li className="w-full" key={category.category}>
+            <NavLink
+              to={`/category`}
+              className={({ isActive }) =>
+                `text-xl border-2 rounded-3xl text-center py-2 px-3 block ${
+                  isActive
+                    ? "text-white bg-purple-700"
+                    : "text-gray-800 bg-gray-300"
+                }`
+              }
+            >
+              {category.category}
+            </NavLink>
+          </li>
         ))}
       </ul>
     </div>
