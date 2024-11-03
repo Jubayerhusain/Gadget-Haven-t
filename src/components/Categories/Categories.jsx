@@ -3,13 +3,13 @@
 import { NavLink } from "react-router-dom";
 
 function Categories({ categories }) {
-  console.log(categories.category);
+//   console.log(categories);
   return (
     <div>
       <ul className="space-y-5 border-2 rounded-xl p-8">
         <li>
           <NavLink
-            to="./AllProduct"
+            to="/"
             className={({ isActive }) =>
               `text-xl border-2 rounded-3xl text-center py-2 px-3 block ${
                 isActive
