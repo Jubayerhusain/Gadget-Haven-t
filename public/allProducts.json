@@ -171,19 +171,7 @@
     "category": "Charger",
     "rating": 4.6
   },
-  {
-    "id": 16,
-    "brand": "Google",
-    "model": "Pixel 30W USB-C Charger",
-    "power": "30W",
-    "color": "White",
-    "price": 57,
-    "release_date": "2020-10-15",
-    "img": "https://i.ibb.co.com/3k1PYv6/51qg-UAc-J3-HL.jpg",
-    "description": "Google's Pixel 30W USB-C Charger provides fast charging for Pixel devices and other USB-C enabled devices.",
-    "category": "Charger",
-    "rating": 4.4
-  },
+
   {
     "id": 17,
     "brand": "Sony",
