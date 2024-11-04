@@ -19,7 +19,7 @@ function ProductDetails() {
     description,
     category,
     rating,
-  } = findData;
+  }= findData;
   return (
     <div className="min-h-[850px]">
       <div className=" bg-[#9538E2] min-h-[400px] rounded-2xl relative">
