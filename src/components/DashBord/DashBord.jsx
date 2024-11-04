@@ -5,6 +5,7 @@ import {
   getStoredWishList,
 } from "../../utilitis/localStorage";
 import modalimage from "./../../assets/Group.png";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 function DashBord() {
   const allProducts = useLoaderData();
@@ -197,10 +198,10 @@ function DashBord() {
                     </div>
                   </div>
                   <button
-                    className="mt-4 btn rounded-xl text-lg bg-red-500 text-white hover:bg-red-600"
+                    className="mt-4 btn rounded-2xl text-lg bg-red-500 text-white hover:bg-red-500"
                     onClick={() => deleteItem(item.id)}
                   >
-                    Delete
+                    <FaRegTrashAlt />
                   </button>
                 </div>
               </div>
