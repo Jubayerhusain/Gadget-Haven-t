@@ -91,8 +91,7 @@
     "category": "Charger",
     "rating": 4.5
   },
- 
-  
+
   {
     "id": 10,
     "brand": "Xiaomi",
@@ -301,5 +300,117 @@
     "description": "Anker Soundcore Life Q30 features active noise cancellation, great sound quality, and long battery life at an affordable price.",
     "category": "Headphone",
     "rating": "4.3"
+  },
+  {
+    "id": 27,
+    "brand": "Apple",
+    "model": "MacBook Air M2",
+    "storage": "256GB",
+    "color": "Space Gray",
+    "price": 1199,
+    "release_date": "2022-07-15",
+    "img": "https://i.ibb.co.com/CV0pWRy/image-processing20240402-13-1307g5q.jpg",
+    "screen_size": "13.6 inches",
+    "description": "The MacBook Air M2 features a stunning Retina display, Apple M2 chip, and all-day battery life.",
+    "category": "Laptop",
+    "rating": "4.8"
+  },
+  {
+    "id": 28,
+    "brand": "Dell",
+    "model": "XPS 13",
+    "storage": "512GB",
+    "color": "Platinum Silver",
+    "price": 999,
+    "release_date": "2022-01-10",
+    "img": "https://i.ibb.co.com/3cHc6Vk/1552046421-IMG-1152700.webp",
+    "screen_size": "13.4 inches",
+    "description": "Dell XPS 13 offers an InfinityEdge display, sleek design, and powerful performance with the latest Intel processors.",
+    "category": "Laptop",
+    "rating": "4.7"
+  },
+  {
+    "id": 29,
+    "brand": "HP",
+    "model": "Spectre x360",
+    "storage": "1TB",
+    "color": "Noir",
+    "price": 1399,
+    "release_date": "2022-03-15",
+    "img": "https://i.ibb.co.com/NC88bPC/HP-Spectre-X360-14-Ef2015tu-1.webp",
+    "screen_size": "13.3 inches",
+    "description": "The HP Spectre x360 is a premium convertible laptop with a 4K OLED display and long battery life.",
+    "category": "Laptop",
+    "rating": "4.6"
+  },
+  {
+    "id": 30,
+    "brand": "Lenovo",
+    "model": "ThinkPad X1 Carbon",
+    "storage": "512GB",
+    "color": "Black",
+    "price": 1249,
+    "release_date": "2022-05-20",
+    "img": "https://i.ibb.co.com/09hrg5F/acer-laptop-500x500.webp",
+    "screen_size": "14 inches",
+    "description": "Lenovo ThinkPad X1 Carbon is designed for business professionals with a lightweight build and robust security features.",
+    "category": "Laptop",
+    "rating": "4.5"
+  },
+  {
+    "id": 31,
+    "brand": "Asus",
+    "model": "ZenBook 14",
+    "storage": "512GB",
+    "color": "Royal Blue",
+    "price": 899,
+    "release_date": "2022-06-10",
+    "img": "https://i.ibb.co.com/gmWX0Sg/ASUS-Zen-Book-14-UX434-FQ-Core-i7-10th-Gen-14-Inch-FHD-Laptop-with-Windows-10-4.webp",
+    "screen_size": "14 inches",
+    "description": "Asus ZenBook 14 features an ultra-slim design, vibrant display, and powerful performance.",
+    "category": "Laptop",
+    "rating": "4.4"
+  },
+  {
+    "id": 32,
+    "brand": "Acer",
+    "model": "Aspire 5",
+    "storage": "256GB",
+    "color": "Silver",
+    "price": 649,
+    "release_date": "2022-08-01",
+    "img": "https://i.ibb.co.com/51sTYmY/180dd82a-99a6-4a0f-a8d9-31526440898e22041014-550x550.webp",
+    "screen_size": "15.6 inches",
+    "description": "The Acer Aspire 5 offers a great balance of performance and affordability with its Full HD display.",
+    "category": "Laptop",
+    "rating": "4.3"
+  },
+  {
+    "id": 33,
+    "brand": "Microsoft",
+    "model": "Surface Laptop 5",
+    "storage": "512GB",
+    "color": "Sandstone",
+    "price": 999,
+    "release_date": "2022-10-12",
+    "img": "https://i.ibb.co.com/WxyyhrN/s-l400.jpg",
+    "screen_size": "13.5 inches",
+    "description": "Microsoft Surface Laptop 5 combines elegance and performance with its PixelSense touchscreen display.",
+    "category": "Laptop",
+    "rating": "4.6"
+  },
+  {
+    "id": 34,
+    "brand": "Razer",
+    "model": "Blade 15",
+    "storage": "1TB",
+    "color": "Black",
+    "price": 1999,
+    "release_date": "2022-09-01",
+    "img": "https://i.ibb.co.com/dLjGSHF/51o-XDBjw-QNL-SL1500.jpg",
+    "screen_size": "15.6 inches",
+    "description": "Razer Blade 15 is a high-performance gaming laptop featuring a stunning display and powerful graphics.",
+    "category": "Gaming Laptop",
+    "rating": "4.9"
   }
 ]
