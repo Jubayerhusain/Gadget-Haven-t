@@ -30,7 +30,7 @@ function Navber() {
       </li>
       <li>
         <NavLink
-          to="/dashboard"
+          to="/dashBoard"
           className={({ isActive }) =>
             isActive ? "text-white font-bold underline" : "text-white"
           }

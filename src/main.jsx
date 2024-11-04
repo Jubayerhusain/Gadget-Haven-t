@@ -6,39 +6,46 @@ import Layout from "./components/Layout/Layout";
 import Home from "./components/Home/Home";
 import AllProduct from "./components/AllProduct/AllProducts";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import DashBord from "./components/DashBord/DashBord";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout></Layout>,
+    element: <Layout />,
     errorElement: (
       <h1 className="text-5xl text-gray-700 font-bold text-center mt-40">
-        Page 404 not Found{" "}
+        Page 404 not Found
       </h1>
     ),
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home />,
         loader: () => fetch(`/categories.json`),
         children: [
           {
             path: "/",
-            element: <AllProduct></AllProduct>,
+            element: <AllProduct />,
             loader: () => fetch(`/allProducts.json`),
           },
           {
             path: "/category/:category",
-            element: <AllProduct></AllProduct>,
+            element: <AllProduct />,
             loader: () => fetch(`/allProducts.json`),
           },
         ],
       },
       {
-        path:"/product/:Id",
-        element: <ProductDetails></ProductDetails>,
-        loader:()=>fetch(`/allProducts.json`)
-      }
+        path: "/product/:Id",
+        element: <ProductDetails />,
+        loader: () => fetch(`/allProducts.json`),
+      },
+      {
+        path: "/dashBoard",
+        element: <DashBord />,
+        loader: () => fetch(`/allProducts.json`)
+      },
     ],
   },
 ]);

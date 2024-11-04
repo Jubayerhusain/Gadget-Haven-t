@@ -1,13 +1,17 @@
 /* eslint-disable no-unused-vars */
+import { RiHeartAdd2Line } from "react-icons/ri";
+import { HiMiniShoppingCart } from "react-icons/hi2";
+
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredProductList, AddToStoredWishList } from "../../utilitis/localStorage";
 
 function ProductDetails() {
   const { Id } = useParams();
   const ProductID = parseInt(Id);
   const allProduct = useLoaderData();
   const findData = allProduct.find((data) => data.id === ProductID);
-  console.log(findData);
   const {
+    id,
     brand,
     model,
     storage,
@@ -19,7 +23,19 @@ function ProductDetails() {
     description,
     category,
     rating,
-  }= findData;
+  } = findData;
+
+  //handle add to cart btn function
+  const handleAddToCart = (id) => {
+    addToStoredProductList(id);
+    console.log(id);
+
+  }; 
+   const handleAddToWishlist = (id) => {
+    AddToStoredWishList(id);
+    console.log(id);
+
+  };
   return (
     <div className="min-h-[850px]">
       <div className=" bg-[#9538E2] min-h-[400px] rounded-2xl relative">
@@ -37,7 +53,11 @@ function ProductDetails() {
           <div className="w-[1000px] h-[520px] border-2 bg-[#FFFFFF]/20 border-white rounded-xl p-6 shadow-2xl">
             <div className=" flex justify-between bg-[#FFFFFF] rounded-xl p-5">
               <figure className="bg-purple-200 p-10 mr-8 rounded-2xl">
-                <img className="w-96 h-full rounded-lg " src={img} alt={brand} />
+                <img
+                  className="w-96 h-full rounded-lg "
+                  src={img}
+                  alt={brand}
+                />
               </figure>
               <div className="space-y-2">
                 <div>
@@ -75,7 +95,7 @@ function ProductDetails() {
                   </p>
                 </div>
                 <div>
-                <h1 className="text-xl font-bold text-gray-700">Rating</h1>
+                  <h1 className="text-xl font-bold text-gray-700">Rating</h1>
                   <div className="flex space-x-2 items-center">
                     <div className="rating">
                       <input
@@ -110,8 +130,15 @@ function ProductDetails() {
                     </p>
                   </div>
                   <div className="flex space-x-2 mt-2">
-                    <button className="btn bg-purple-500 rounded-3xl text-white ">Add To Card </button>
-                    <button className="btn border-2 rounded-3xl text-black ">Love</button>
+                    <button
+                      onClick={() => handleAddToCart(id)}
+                      className="btn bg-purple-500 rounded-3xl text-white hover:bg-purple-950"
+                    >
+                      Add To Card <HiMiniShoppingCart />{" "}
+                    </button>
+                    <button onClick={() => handleAddToWishlist(id)} className="btn text-xl border-2 rounded-3xl text-black hover:bg-purple-100">
+                      <RiHeartAdd2Line />
+                    </button>
                   </div>
                 </div>
               </div>
