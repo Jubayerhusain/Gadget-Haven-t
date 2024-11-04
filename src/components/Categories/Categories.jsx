@@ -24,7 +24,7 @@ function Categories({ categories }) {
         {categories.map((category) => (
           <li className="w-full" key={category.category}>
             <NavLink
-              to={`/category`}
+              to={`/category/${category.category}`}
               className={({ isActive }) =>
                 `text-xl border-2 rounded-3xl text-center py-2 px-3 block ${
                   isActive

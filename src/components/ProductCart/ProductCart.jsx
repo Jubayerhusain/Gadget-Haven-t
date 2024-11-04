@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 function ProductCart({product}) {
+  console.log(product);
     const {brand, model, img, price} = product;
     
   return (
