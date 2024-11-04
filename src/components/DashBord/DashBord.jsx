@@ -3,8 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import {
   getStoredProductList,
   getStoredWishList,
-  // Add any required local storage utility functions if necessary
 } from "../../utilitis/localStorage";
+import modalimage from "./../../assets/Group.png";
 
 function DashBord() {
   const allProducts = useLoaderData();
@@ -47,7 +47,10 @@ function DashBord() {
   const showCart = () => {
     setIsCartView(true);
     setCurrentList(cartList);
-    const priceSum = cartList.reduce((total, product) => total + product.price, 0);
+    const priceSum = cartList.reduce(
+      (total, product) => total + product.price,
+      0
+    );
     setTotalPrice(priceSum);
   };
 
@@ -62,7 +65,6 @@ function DashBord() {
     setCurrentList(sortedList);
   };
 
-  // Function to handle item deletion
   const deleteItem = (itemId) => {
     if (isCartView) {
       const updatedCartList = cartList.filter((item) => item.id !== itemId);
@@ -73,15 +75,17 @@ function DashBord() {
         0
       );
       setTotalPrice(priceSum);
-      // Update local storage if necessary
-      // saveProductList(updatedCartList.map((item) => item.id));
     } else {
       const updatedWishlist = wishlist.filter((item) => item.id !== itemId);
       setWishlist(updatedWishlist);
       setCurrentList(updatedWishlist);
-      // Update local storage if necessary
-      // saveWishList(updatedWishlist.map((item) => item.id));
     }
+  };
+
+  const handleModalClose = () => {
+    setCartList([]);
+    setCurrentList([]);
+    setTotalPrice(0);
   };
 
   return (
@@ -123,7 +127,12 @@ function DashBord() {
               >
                 Sort by Price
               </button>
-              <button className="btn rounded-xl text-lg bg-white text-purple-500 border-2 border-purple-500 hover:border-white hover:bg-purple-500 hover:text-white">
+              <button
+                className="btn rounded-xl text-lg bg-white text-purple-500 border-2 border-purple-500 hover:border-white hover:bg-purple-500 hover:text-white"
+                onClick={() =>
+                  document.getElementById("my_modal_5").showModal()
+                }
+              >
                 Purchase
               </button>
             </div>
@@ -136,53 +145,56 @@ function DashBord() {
           currentList.map((item) => (
             <div key={item.id} className="border rounded-md p-4 m-2 shadow-md">
               <div>
-              <div className="border-2 rounded-2xl p-8 flex space-x-4">
-                <img className="w-52 h-52" src={item.img} alt="" />
-                <div>
-                  <h2 className="text-xl font-semibold text-gray-700">
-                    {item.brand}
-                  </h2>
-                  <p className="text-lg font-semibold text-gray-600">
-                    {item.description}
-                  </p>
-                  <p className="font-semibold text-gray-600">
-                    Model: {item.model}
-                  </p>
-                  <p className="font-semibold text-gray-600">
-                    Price: ${item.price}
-                  </p>
-                  <div className="flex space-x-3 items-center">
-                    <div className="rating">
-                      <input
-                        type="radio"
-                        name={`rating-${item.id}`}
-                        className="mask mask-star-2 bg-purple-500"
-                      />
-                      <input
-                        type="radio"
-                        name={`rating-${item.id}`}
-                        className="mask mask-star-2 bg-purple-500"
-                      />
-                      <input
-                        type="radio"
-                        name={`rating-${item.id}`}
-                        className="mask mask-star-2 bg-purple-500"
-                      />
-                      <input
-                        type="radio"
-                        name={`rating-${item.id}`}
-                        className="mask mask-star-2 bg-purple-500"
-                        defaultChecked
-                      />
-                      <input
-                        type="radio"
-                        name={`rating-${item.id}`}
-                        className="mask mask-star-2 bg-purple-500"
-                      />
+                <div className="border-2 rounded-2xl p-8 flex justify-between items-center space-x-4">
+                  <div className="flex space-x-4">
+                    <img className="w-52 h-52" src={item.img} alt="" />
+                    <div>
+                      <h2 className="text-xl font-semibold text-gray-700">
+                        {item.brand}
+                      </h2>
+                      <p className="text-lg font-semibold text-gray-600">
+                        {item.description}
+                      </p>
+                      <p className="font-semibold text-gray-600">
+                        Model: {item.model}
+                      </p>
+                      <p className="font-semibold text-gray-600">
+                        Price: ${item.price}
+                      </p>
+                      <div className="flex space-x-3 items-center">
+                        <div className="rating">
+                          <input
+                            type="radio"
+                            name={`rating-${item.id}`}
+                            className="mask mask-star-2 bg-purple-500"
+                          />
+                          <input
+                            type="radio"
+                            name={`rating-${item.id}`}
+                            className="mask mask-star-2 bg-purple-500"
+                          />
+                          <input
+                            type="radio"
+                            name={`rating-${item.id}`}
+                            className="mask mask-star-2 bg-purple-500"
+                          />
+                          <input
+                            type="radio"
+                            name={`rating-${item.id}`}
+                            className="mask mask-star-2 bg-purple-500"
+                            defaultChecked
+                          />
+                          <input
+                            type="radio"
+                            name={`rating-${item.id}`}
+                            className="mask mask-star-2 bg-purple-500"
+                          />
+                        </div>
+                        <p className="bg-gray-100 rounded-full inline-block px-4 py-2 border-2 border-white">
+                          {item.rating}
+                        </p>
+                      </div>
                     </div>
-                    <p className="bg-gray-100 rounded-full inline-block px-4 py-2 border-2 border-white">
-                      {item.rating}
-                    </p>
                   </div>
                   <button
                     className="mt-4 btn rounded-xl text-lg bg-red-500 text-white hover:bg-red-600"
@@ -192,7 +204,6 @@ function DashBord() {
                   </button>
                 </div>
               </div>
-              </div>
             </div>
           ))
         ) : (
@@ -201,6 +212,32 @@ function DashBord() {
           </p>
         )}
       </div>
+
+      {/* Modal */}
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <div className="flex justify-center my-2">
+            <img src={modalimage} alt="" />
+          </div>
+          <h3 className="font-bold text-2xl text-center">Total Price</h3>
+          <p className="py-2 text-center text-lg">
+            Your total price is: ${totalPrice}
+          </p>
+          <p className="text-center text-md font-semibold">
+            Thanks for purchasing.
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              <button
+                className="btn bg-purple-500 text-gray-100 hover:bg-purple-800"
+                onClick={handleModalClose}
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 }
