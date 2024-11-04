@@ -1,0 +1,67 @@
+[
+    {
+      "id": 16,
+      "brand": "OnePlus",
+      "model": "OnePlus 10 Pro",
+      "storage": "256GB",
+      "color": "Volcanic Black",
+      "price": 899,
+      "release_date": "2022-01-11",
+      "img": "https://image01.oneplus.net/shop/2022/01/03/20220103141619_a7614e69e5ea460eabeaf7651b612384.png",
+      "description": "Premium smartphone with fast charging, great camera, and sleek design.",
+      "category": "Smartphone",
+      "rating": "4.8"
+    },
+    {
+      "id": 17,
+      "brand": "Xiaomi",
+      "model": "Mi Band 7",
+      "color": "Black",
+      "price": 49.99,
+      "release_date": "2022-06-01",
+      "img": "https://cdn.vox-cdn.com/thumbor/eYBQ1upjqlXfIVK8of-yIdFJ01s=/0x0:2040x1360/920x613/filters:focal(1008x620:1032x644)/cdn.vox-cdn.com/uploads/chorus_image/image/69006780/IMG_0605.0.jpeg",
+      "description": "Fitness tracker with AMOLED display, heart rate monitor, and multiple sports modes.",
+      "category": "Fitness Tracker",
+      "rating": "4.5"
+    },
+    {
+      "id": 18,
+      "brand": "Asus",
+      "model": "ROG Zephyrus G14",
+      "storage": "1TB SSD",
+      "color": "Moonlight White",
+      "price": 1499,
+      "release_date": "2022-04-10",
+      "img": "https://rog.asus.com/media/1661505122.png",
+      "description": "Powerful gaming laptop with an AMD Ryzen 9 processor and RTX graphics.",
+      "category": "Laptop",
+      "rating": "4.7"
+    },
+    {
+      "id": 19,
+      "brand": "Oculus",
+      "model": "Quest 2",
+      "type": "VR Headset",
+      "storage": "128GB",
+      "price": 299,
+      "release_date": "2020-10-13",
+      "img": "https://uploadvr.com/wp-content/uploads/2020/09/quest-2-price-featured.jpg",
+      "description": "All-in-one VR headset with a library of immersive games and experiences.",
+      "category": "VR",
+      "rating": "4.6"
+    },
+    {
+      "id": 20,
+      "brand": "JBL",
+      "model": "Charge 5",
+      "type": "Portable Speaker",
+      "color": "Black",
+      "price": 179,
+      "release_date": "2021-02-16",
+      "img": "https://www.jbl.com/on/demandware.static/-/Sites-jbl-us-Library/default/dwf6ed639f/images/JBL-CHARGE5-SPEAKER-2021-BLACK-1111494.jpg",
+      "description": "Powerful portable speaker with deep bass and up to 20 hours of playtime.",
+      "category": "Speaker",
+      "rating": "4.7"
+    }
+  ]
+  

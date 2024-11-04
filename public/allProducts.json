@@ -25,19 +25,7 @@
     "category": "Button Phone",
     "rating": 4.0
   },
-  {
-    "id": 3,
-    "brand": "Lava",
-    "model": "A1",
-    "storage": "4MB",
-    "color": "Black",
-    "price": 305,
-    "release_date": "2018-04-10",
-    "img": "https://i.ibb.co.com/bb7d45j/full-body-housing-for-lava-a1-josh-21-black-maxbhi-com-16749-0.jpg",
-    "description": "Lava A1 is a basic phone with long battery life and essential features for everyday use.",
-    "category": "Button Phone",
-    "rating": 4.3
-  },
+
   {
     "id": 4,
     "brand": "itel",
@@ -103,19 +91,8 @@
     "category": "Charger",
     "rating": 4.5
   },
-  {
-    "id": 9,
-    "brand": "Anker",
-    "model": "PowerPort III Nano",
-    "power": "20W",
-    "color": "White",
-    "price": 75,
-    "release_date": "2020-11-15",
-    "img": "https://ibb.co.com/0Jbtg2H",
-    "description": "Anker's PowerPort III Nano is a compact charger that delivers fast charging for iPhone and other devices.",
-    "category": "Charger",
-    "rating": 4.8
-  },
+ 
+  
   {
     "id": 10,
     "brand": "Xiaomi",
@@ -206,5 +183,135 @@
     "description": "Google's Pixel 30W USB-C Charger provides fast charging for Pixel devices and other USB-C enabled devices.",
     "category": "Charger",
     "rating": 4.4
+  },
+  {
+    "id": 17,
+    "brand": "Sony",
+    "model": "WH-1000XM4",
+    "type": "Over-ear",
+    "color": "Black",
+    "price": 348,
+    "release_date": "2020-08-18",
+    "img": "https://i.ibb.co.com/2KXF4HT/wh-1000xm4-blue-01-500x500.jpg",
+    "description": "The Sony WH-1000XM4 offers industry-leading noise cancellation and high-quality sound.",
+    "category": "Headphone",
+    "rating": "4.8"
+  },
+  {
+    "id": 18,
+    "brand": "Bose",
+    "model": "Noise Cancelling Headphones 700",
+    "type": "Over-ear",
+    "color": "Silver",
+    "price": 379,
+    "release_date": "2019-06-20",
+    "img": "https://i.ibb.co.com/3hLShJj/dcff929be2cc93923d083c3b864764ed-250.png",
+    "description": "Bose 700 delivers exceptional sound and voice clarity, with an adjustable noise cancellation feature.",
+    "category": "Headphone",
+    "rating": "4.7"
+  },
+  {
+    "id": 19,
+    "brand": "Apple",
+    "model": "AirPods Max",
+    "type": "Over-ear",
+    "color": "Space Gray",
+    "price": 549,
+    "release_date": "2020-12-15",
+    "img": "https://i.ibb.co.com/Q62qzDJ/Apple-Airpods-Max-with-Smart-Case-Green-With-Light-Green-2.webp",
+    "description": "Apple AirPods Max features immersive sound, active noise cancellation, and a luxurious design.",
+    "category": "Headphone",
+    "rating": "4.6"
+  },
+  {
+    "id": 20,
+    "brand": "Sennheiser",
+    "model": "HD 660S",
+    "type": "Over-ear",
+    "color": "Black",
+    "price": 399,
+    "release_date": "2017-06-01",
+    "img": "https://i.ibb.co.com/tD5CBmR/Review-of-Sennheiser-HD-620-S-Closed-Back-Headphones-2048x2048.webp",
+    "description": "The Sennheiser HD 660S offers audiophile sound quality with open-back design for a natural listening experience.",
+    "category": "Headphone",
+    "rating": "4.5"
+  },
+  {
+    "id": 21,
+    "brand": "Jabra",
+    "model": "Elite 85h",
+    "type": "Over-ear",
+    "color": "Titanium Black",
+    "price": 249,
+    "release_date": "2019-03-26",
+    "img": "https://i.ibb.co.com/6gNS7z7/g143-HD660-S-o-other5.jpg",
+    "description": "Jabra Elite 85h provides smart noise cancellation and exceptional battery life for a seamless experience.",
+    "category": "Headphone",
+    "rating": "4.4"
+  },
+  {
+    "id": 22,
+    "brand": "Beyerdynamic",
+    "model": "DT 770 Pro",
+    "type": "Over-ear",
+    "color": "Black",
+    "price": 159,
+    "release_date": "2019-01-15",
+    "img": "https://i.ibb.co.com/fnyzxd4/s-l400.jpg",
+    "description": "The Beyerdynamic DT 770 Pro is renowned for its comfort and sound isolation, perfect for studio use.",
+    "category": "Headphone",
+    "rating": "4.6"
+  },
+  {
+    "id": 23,
+    "brand": "Audio-Technica",
+    "model": "ATH-M50x",
+    "type": "Over-ear",
+    "color": "Black",
+    "price": 169,
+    "release_date": "2014-02-01",
+    "img": "https://i.ibb.co/xYhWs36/OIP11.jpg",
+    "description": "Audio-Technica ATH-M50x provides excellent sound quality and comfortable fit, ideal for mixing and monitoring.",
+    "category": "Headphone",
+    "rating": "4.5"
+  },
+  {
+    "id": 24,
+    "brand": "Razer",
+    "model": "BlackShark V2 Pro",
+    "type": "Over-ear",
+    "color": "Black",
+    "price": 179,
+    "release_date": "2020-08-25",
+    "img": "https://i.ibb.co/4M4bHDM/OIP.jpg",
+    "description": "Razer BlackShark V2 Pro is a wireless gaming headset with THX Spatial Audio for an immersive gaming experience.",
+    "category": "Headphone",
+    "rating": "4.4"
+  },
+  {
+    "id": 25,
+    "brand": "Bang & Olufsen",
+    "model": "Beoplay H9",
+    "type": "Over-ear",
+    "color": "Natural",
+    "price": 499,
+    "release_date": "2018-05-01",
+    "img": "https://i.ibb.co.com/0rxqtck/51n-LOw0-Sx-HL.jpg",
+    "description": "Beoplay H9 combines luxurious materials with signature sound and active noise cancellation.",
+    "category": "Headphone",
+    "rating": "4.5"
+  },
+  {
+    "id": 26,
+    "brand": "Anker",
+    "model": "Soundcore Life Q30",
+    "type": "Over-ear",
+    "color": "Black",
+    "price": 89,
+    "release_date": "2020-10-01",
+    "img": "https://i.ibb.co.com/7b9Jnpp/Anker-Soundcore-Space-Q45-ANC-Headphones-300x300.webp",
+    "description": "Anker Soundcore Life Q30 features active noise cancellation, great sound quality, and long battery life at an affordable price.",
+    "category": "Headphone",
+    "rating": "4.3"
   }
 ]

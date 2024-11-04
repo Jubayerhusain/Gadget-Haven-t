@@ -1,7 +1,7 @@
 import bannerImage from "./../../assets/banner.jpg";
 function Banner() {
   return (
-    <div className="min-h-[900px]">
+    <div className="min-h-[780px]">
       <div className=" bg-[#9538E2] min-h-[500px] rounded-b-2xl relative">
         <div className="text-center">
           <h1 className="font-bold text-4xl w-6/12 text-white mx-auto pt-10 pb-2">
