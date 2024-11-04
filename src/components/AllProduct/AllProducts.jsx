@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function AllProduct() {
   const allProduct = useLoaderData();
   const { category } = useParams();
-  console.log("Product Category:", category);
+//   console.log("Product Category:", category);
 
   const [cartProducts, setCartProducts] = useState([]);
   useEffect(() => {

@@ -6,7 +6,7 @@ function Footer() {
             Gadget Heaven
           </h1>
           <p className="text-lg font-normal text-center text-gray-700">
-            Leading the way in cutting-edge technology and innovation.
+            Loading the way in cutting-edge technology and innovation.
           </p>
         </footer>
         <div className="border-2 border-dashed my-10"></div>

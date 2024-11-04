@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
-function ProductCart({product}) {
-  console.log(product);
-    const {brand, model, img, price} = product;
-    
+import { Link } from "react-router-dom";
+function ProductCart({ product }) {
+  // console.log(product);
+  const {id, brand, model, img, price } = product;
+
   return (
     <div>
       <div className="card bg-base-100 w-96 mx-auto shadow-xl">
@@ -18,9 +19,11 @@ function ProductCart({product}) {
           <p className="font-semibold text-gray-600">Price: ${price}</p>
           <div className="card-actions justify-start">
             <div>
-              <button className="border-2 rounded-3xl py-2 px-4 border-purple-700 text-purple-700">
-                View Details
-              </button>
+              <Link to={`/product/${id}`}>
+                <button className="border-2 rounded-3xl py-2 px-4 border-purple-700 text-purple-700">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>
