@@ -8,6 +8,7 @@ import {
 } from "../../utilitis/localStorage";
 import modalimage from "./../../assets/Group.png";
 import { FaRegTrashAlt } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 function Dashboard() {
   const allProducts = useLoaderData();
@@ -79,11 +80,15 @@ function Dashboard() {
         0
       );
       setTotalPrice(priceSum);
+      toast.error("Remove Done")
+
     } else {
       const updatedWishlist = wishlist.filter((item) => item.id !== itemId);
       setWishlist(updatedWishlist);
       setCurrentList(updatedWishlist);
-      removeCartFromWishList(itemId); // উইশলিস্ট থেকে আইটেম মুছে ফেলার জন্য ফাংশন কল
+      removeCartFromWishList(itemId);
+      toast.error("Remove Done")
+
     }
   };
 
