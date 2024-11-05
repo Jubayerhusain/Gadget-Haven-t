@@ -7,17 +7,15 @@ import Home from "./components/Home/Home";
 import AllProduct from "./components/AllProduct/AllProducts";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import DashBord from "./components/DashBord/DashBord";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: (
-      <h1 className="text-5xl text-gray-700 font-bold text-center mt-40">
-        Page 404 not Found
-      </h1>
-    ),
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -45,6 +43,11 @@ const router = createBrowserRouter([
         path: "/dashBoard",
         element: <DashBord />,
         loader: () => fetch(`/allProducts.json`)
+      },
+      {
+        path: "/aboutUs",
+        element: <AboutUs />,
+        // loader: () => fetch(`/allProducts.json`)
       },
     ],
   },
