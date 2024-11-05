@@ -20,6 +20,12 @@ const addToStoredProductList = (id) => {
         alert('This product already exists');
     }
 };
+// remove the cart from cart list..
+const removeCartFromPRoductList = (id) =>{
+    const storedProductList = getStoredProductList();
+    const updatePRoductList = storedProductList.filter(cartId=> cartId !==id)
+    localStorage.setItem('product-list', JSON.stringify(updatePRoductList));
+}
 // get the item from localStorage 
 const getStoredWishList = () => {
     const getWishList = localStorage.getItem('wish-list');
@@ -39,5 +45,10 @@ const AddToStoredWishList = (id) => {
         alert('Wish list added successfully');
     }
 };
-
-export { addToStoredProductList, getStoredProductList, AddToStoredWishList, getStoredWishList};
+// remove the cart from wish list..
+const removeCartFromWishList = (id) =>{
+    const storedStoredWishList = getStoredWishList();
+    const updateWishList = storedStoredWishList.filter(wishId=> wishId !==id)
+    localStorage.setItem('wish-list', JSON.stringify(updateWishList));
+}
+export { addToStoredProductList, getStoredProductList, removeCartFromPRoductList, AddToStoredWishList, getStoredWishList, removeCartFromWishList};

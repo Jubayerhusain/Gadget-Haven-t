@@ -9,7 +9,6 @@ function Navbar() {
   const [wishlistCount, setWishlistCount] = useState(0);
 
   useEffect(() => {
-    // Update cart and wishlist counts from localStorage
     const storedProductList = getStoredProductList();
     const storedWishList = getStoredWishList();
 

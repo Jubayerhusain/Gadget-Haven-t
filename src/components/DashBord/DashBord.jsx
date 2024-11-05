@@ -3,11 +3,13 @@ import { useLoaderData } from "react-router-dom";
 import {
   getStoredProductList,
   getStoredWishList,
+  removeCartFromPRoductList,
+  removeCartFromWishList
 } from "../../utilitis/localStorage";
 import modalimage from "./../../assets/Group.png";
 import { FaRegTrashAlt } from "react-icons/fa";
 
-function DashBord() {
+function Dashboard() {
   const allProducts = useLoaderData();
   const [cartList, setCartList] = useState([]);
   const [wishlist, setWishlist] = useState([]);
@@ -71,6 +73,7 @@ function DashBord() {
       const updatedCartList = cartList.filter((item) => item.id !== itemId);
       setCartList(updatedCartList);
       setCurrentList(updatedCartList);
+      removeCartFromPRoductList(itemId);
       const priceSum = updatedCartList.reduce(
         (total, product) => total + product.price,
         0
@@ -80,6 +83,7 @@ function DashBord() {
       const updatedWishlist = wishlist.filter((item) => item.id !== itemId);
       setWishlist(updatedWishlist);
       setCurrentList(updatedWishlist);
+      removeCartFromWishList(itemId); // উইশলিস্ট থেকে আইটেম মুছে ফেলার জন্য ফাংশন কল
     }
   };
 
@@ -243,4 +247,4 @@ function DashBord() {
   );
 }
 
-export default DashBord;
+export default Dashboard;
