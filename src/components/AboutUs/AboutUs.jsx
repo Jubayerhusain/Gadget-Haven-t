@@ -1,4 +1,9 @@
 import bannerIMage from "./../../assets/banner.jpg";
+import man1 from "./../../assets/man1.jpg";
+import man2 from "./../../assets/man2.jpg";
+import man3 from "./../../assets/man3.jpg";
+import man4 from "./../../assets/man4.jpg";
+import { hideElement } from './../../../node_modules/flowbite-datepicker/js/lib/dom';
 function AboutUs() {
   return (
     <div>
@@ -126,7 +131,7 @@ function AboutUs() {
               Excellent electronic service with affordability
             </h1>
             <div className="shadow-xl rounded-2xl px-4 py-8 w-[800px]">
-              <h1  className="text-2xl font-bold text-gray-700 py-3">Vision</h1>
+              <h1 className="text-2xl font-bold text-gray-700 py-3">Vision</h1>
               <h1 className="text-md text-gray-600 font-semibold">
                 Our vision at Gadget Heaven is to become the leading destination
                 for tech enthusiasts, offering a seamless and engaging platform
@@ -135,7 +140,7 @@ function AboutUs() {
               </h1>
             </div>
             <div className="shadow-xl rounded-2xl px-4 py-8 w-[800px]">
-              <h1  className="text-2xl font-bold text-gray-700 py-3">Vision</h1>
+              <h1 className="text-2xl font-bold text-gray-700 py-3">Vision</h1>
               <h1 className="text-md text-gray-600 font-semibold">
                 Our vision at Gadget Heaven is to become the leading destination
                 for tech enthusiasts, offering a seamless and engaging platform
@@ -143,6 +148,65 @@ function AboutUs() {
                 innovative gadgets.{" "}
               </h1>
             </div>
+          </div>
+        </div>
+      </div>
+      {/* meet out team section  */}
+      <div className="mt-28"> 
+        <h1 className="text-5xl font-bold text-purple-700 text-center pt-8">Meet Out Team </h1>
+      </div>
+      <div className="border-b-2 border-dashed border-gray-400 my-14" ></div>
+      <div className="flex justify-around  my-14">
+        <div className="card card-compact bg-base-100 w-80 shadow-xl">
+          <div className="avatar flex justify-center">
+            <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring ring-offset-2">
+              <img src={man4} />
+            </div>
+          </div>
+          <div className="card-body">
+            <h2 className="font-bold text-2xl text-gray-700 text-center my-2">
+              Jubayer Husain
+            </h2>
+            <p className="text-center text-md font-semibold">Founder</p>
+          </div>
+        </div>
+        <div className="card card-compact bg-base-100 w-80 shadow-xl">
+          <div className="avatar flex justify-center">
+            <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring ring-offset-2">
+              <img src={man3} />
+            </div>
+          </div>
+          <div className="card-body">
+            <h2 className="font-bold text-2xl text-gray-700 text-center my-2">
+              Freddie Scott
+            </h2>
+            <p className="text-center text-md font-semibold">Co-Founder</p> 
+          </div>
+        </div>
+        <div className="card card-compact bg-base-100 w-80 shadow-xl">
+          <div className="avatar flex justify-center">
+            <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring ring-offset-2">
+              <img src={man2} />
+            </div>
+          </div>
+          <div className="card-body">
+            <h2 className="font-bold text-2xl text-gray-700 text-center my-2">
+            Jackson Hussain
+            </h2>
+            <p className="text-center text-md font-semibold">Business Manager</p>
+          </div>
+        </div>
+        <div className="card card-compact bg-base-100 w-80 shadow-xl">
+          <div className="avatar flex justify-center">
+            <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring ring-offset-2">
+              <img src={man1} />
+            </div>
+          </div>
+          <div className="card-body">
+            <h2 className="font-bold text-2xl text-gray-700 text-center my-2">
+            Peter Stevens
+            </h2>
+            <p className="text-center text-md font-semibold">Marketing Manager</p>
           </div>
         </div>
       </div>
