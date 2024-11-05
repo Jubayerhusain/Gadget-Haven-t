@@ -38,7 +38,7 @@ const getStoredWishList = () => {
     return [];
 }
 
-// set the item to product list 
+// set the item to product list
 const AddToStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
     

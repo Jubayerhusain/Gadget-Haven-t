@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { PiShoppingCart } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { getStoredProductList, getStoredWishList } from "../../utilitis/localStorage";
@@ -8,6 +8,8 @@ function Navbar() {
   const [cartCount, setCartCount] = useState(0);
   const [wishlistCount, setWishlistCount] = useState(0);
 
+  const { pathname } = useLocation();
+
   useEffect(() => {
     const storedProductList = getStoredProductList();
     const storedWishList = getStoredWishList();
@@ -16,45 +18,45 @@ function Navbar() {
     setWishlistCount(storedWishList.length);
   }, []);
 
+  const isDashboard = pathname === "/dashboard";
+  const isStatistics = pathname === "/Statistics";
+  const isTopSell = pathname === "/topSell";
+
+  const navbarClass = isDashboard
+    ? "navbar bg-white py-4 px-14 text-gray-700 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg"
+    : isStatistics
+    ? "navbar bg-gray-800 py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg"
+    : isTopSell
+    ? "navbar bg-green-700 py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg"
+    : "navbar bg-[#9538E2] py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg";
+
+  const getLinkClass = (isActive) => {
+    if (isActive) return "font-bold underline";
+    if (isDashboard) return "text-gray-700";
+    if (isStatistics) return "text-white";
+    if (isTopSell) return "text-white";
+    return "text-white";
+  };
+
   const Link = (
     <>
       <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "text-white font-bold underline" : "text-white"
-          }
-        >
+        <NavLink to="/" className={({ isActive }) => getLinkClass(isActive)}>
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/Statistics"
-          className={({ isActive }) =>
-            isActive ? "text-white font-bold underline" : "text-white"
-          }
-        >
+        <NavLink to="/Statistics" className={({ isActive }) => getLinkClass(isActive)}>
           Statistics
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            isActive ? "text-white font-bold underline" : "text-white"
-          }
-        >
+        <NavLink to="/dashboard" className={({ isActive }) => getLinkClass(isActive)}>
           Dashboard
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/topSell"
-          className={({ isActive }) =>
-            isActive ? "text-white font-bold underline" : "text-white"
-          }
-        >
+        <NavLink to="/topSell" className={({ isActive }) => getLinkClass(isActive)}>
           Top Sell
         </NavLink>
       </li>
@@ -62,7 +64,7 @@ function Navbar() {
   );
 
   return (
-    <div className="navbar bg-[#9538E2] py-4 px-14 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg">
+    <div className={navbarClass}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -73,12 +75,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
           <ul
@@ -88,25 +85,25 @@ function Navbar() {
             {Link}
           </ul>
         </div>
-        <a className="font-bold text-white text-3xl">Gadget Heaven</a>
+        <a className="font-bold text-3xl">Gadget Heaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg">{Link}</ul>
       </div>
       <div className="navbar-end">
         <div className="flex items-center space-x-3">
-          <div className="relative p-3 text-md rounded-full bg-white">
+          <div className="relative p-3 text-md rounded-full bg-gray-700 text-white">
             <PiShoppingCart />
             {cartCount > 0 && (
-              <span className="absolute top-[-2px] right-[-8px] rounded-full bg-purple-700 border-2 border-white text-white text-xs w-5 h-5 flex items-center justify-center">
+              <span className="absolute top-[-2px] right-[-8px] text-white rounded-full bg-purple-700 border-2 border-white text-xs w-5 h-5 flex items-center justify-center">
                 {cartCount}
               </span>
             )}
           </div>
-          <div className="relative p-3 text-md rounded-full bg-white">
+          <div className="relative p-3 text-md rounded-full bg-gray-700 text-white">
             <FaRegHeart />
             {wishlistCount > 0 && (
-              <span className="absolute top-[-2px] right-[-8px] rounded-full bg-purple-700 border-2 border-white text-white text-xs w-5 h-5 flex items-center justify-center">
+              <span className="absolute text-white top-[-2px] right-[-8px] rounded-full bg-purple-700 border-2 border-white text-xs w-5 h-5 flex items-center justify-center">
                 {wishlistCount}
               </span>
             )}
