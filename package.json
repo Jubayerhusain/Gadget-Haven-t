@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "flowbite": "^2.5.2",
     "gadget-heaven": "file:",
     "localforage": "^1.10.0",
     "match-sorter": "^7.0.0",
