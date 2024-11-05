@@ -1,9 +1,22 @@
 import { NavLink } from "react-router-dom";
 import { PiShoppingCart } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
+import { getStoredProductList, getStoredWishList } from "../../utilitis/localStorage";
+import { useState, useEffect } from "react";
 
+function Navbar() {
+  const [cartCount, setCartCount] = useState(0);
+  const [wishlistCount, setWishlistCount] = useState(0);
 
-function Navber() {
+  useEffect(() => {
+    // Update cart and wishlist counts from localStorage
+    const storedProductList = getStoredProductList();
+    const storedWishList = getStoredWishList();
+
+    setCartCount(storedProductList.length);
+    setWishlistCount(storedWishList.length);
+  }, []);
+
   const Link = (
     <>
       <li>
@@ -13,7 +26,6 @@ function Navber() {
             isActive ? "text-white font-bold underline" : "text-white"
           }
         >
-          {" "}
           Home
         </NavLink>
       </li>
@@ -24,34 +36,32 @@ function Navber() {
             isActive ? "text-white font-bold underline" : "text-white"
           }
         >
-          {" "}
           Statistics
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/dashBoard"
+          to="/dashboard"
           className={({ isActive }) =>
             isActive ? "text-white font-bold underline" : "text-white"
           }
         >
-          {" "}
           Dashboard
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/topSell "
+          to="/topSell"
           className={({ isActive }) =>
-            isActive ? "text-white bold underline" : "text-white"
+            isActive ? "text-white font-bold underline" : "text-white"
           }
         >
-          {" "}
           Top Sell
         </NavLink>
       </li>
     </>
   );
+
   return (
     <div className="navbar bg-[#9538E2] py-4 px-14 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg">
       <div className="navbar-start">
@@ -86,11 +96,21 @@ function Navber() {
       </div>
       <div className="navbar-end">
         <div className="flex items-center space-x-3">
-          <div className="p-3 text-md rounded-full bg-white">
-          <PiShoppingCart />
+          <div className="relative p-3 text-md rounded-full bg-white">
+            <PiShoppingCart />
+            {cartCount > 0 && (
+              <span className="absolute top-[-2px] right-[-8px] rounded-full bg-purple-700 border-2 border-white text-white text-xs w-5 h-5 flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
           </div>
-          <div className="p-3 text-md rounded-full bg-white">
-          <FaRegHeart />
+          <div className="relative p-3 text-md rounded-full bg-white">
+            <FaRegHeart />
+            {wishlistCount > 0 && (
+              <span className="absolute top-[-2px] right-[-8px] rounded-full bg-purple-700 border-2 border-white text-white text-xs w-5 h-5 flex items-center justify-center">
+                {wishlistCount}
+              </span>
+            )}
           </div>
         </div>
       </div>
@@ -98,4 +118,4 @@ function Navber() {
   );
 }
 
-export default Navber;
+export default Navbar;
