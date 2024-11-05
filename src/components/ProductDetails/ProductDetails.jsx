@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react"; // Import useState
+import { useEffect, useState } from "react"; 
 import { RiHeartAdd2Line } from "react-icons/ri";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredProductList, AddToStoredWishList } from "../../utilitis/localStorage";
+import { addToStoredProductList, getStoredProductList, AddToStoredWishList, getStoredWishList } from "../../utilitis/localStorage";
 
 function ProductDetails() {
   const { Id } = useParams();
@@ -29,18 +29,29 @@ function ProductDetails() {
   const [isAddedToCart, setIsAddedToCart] = useState(false);
   const [isAddedToWishlist, setIsAddedToWishlist] = useState(false);
 
+  useEffect(() => {
+    const storedCart = getStoredProductList();
+    const storedWishlist = getStoredWishList();
+
+    // Check if the product is in cart or wishlist
+    if (storedCart.includes(ProductID)) {
+      setIsAddedToCart(true);
+    }
+    if (storedWishlist.includes(ProductID)) {
+      setIsAddedToWishlist(true);
+    }
+  }, [ProductID]);
+
   // Handle add to cart button function
   const handleAddToCart = (id) => {
     addToStoredProductList(id);
-    setIsAddedToCart(true); // Disable the button after adding to cart
-    console.log(id);
+    setIsAddedToCart(true); 
   };
 
   // Handle add to wishlist button function
   const handleAddToWishlist = (id) => {
     AddToStoredWishList(id);
-    setIsAddedToWishlist(true); // Disable the button after adding to wishlist
-    console.log(id);
+    setIsAddedToWishlist(true); 
   };
 
   return (
