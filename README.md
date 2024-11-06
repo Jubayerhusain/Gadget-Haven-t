@@ -5,12 +5,12 @@ Welcome to **GadgetHaven** — an interactive e-commerce platform dedicated to g
 ---
 
 ## 🌐 Live Website
-[**GadgetHaven Live Site**](https://example.com) *(Replace with your actual live website link)*
+[**GadgetHaven Live Site**](https://bd-tech-gadget.surge.sh/) *(Replace with your actual live website link)*
 
 ---
 
 ## 📄 Project Requirements
-[**Requirement Document**](https://example.com/requirements) *(Replace with the actual requirement document link)*
+[**Requirement Document**](file:///F:/programing_hero/All_clone/assingment/B10-A8-gadget-heaven-main/Batch-10_Assignment-08.pdf) *(Replace with the actual requirement document link)*
 
 ---
 
