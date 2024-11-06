@@ -10,7 +10,7 @@ function Layout() {
     useEffect(() => {
         const path = location.pathname;
 
-        let title = "BD-TECT_GADGET"; // Default title
+        let title = "BD-TECT_GADGET"; 
         if (path === "/") {
             title = "Home";
         } else if (path.includes("/product/")) {
