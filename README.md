@@ -1,8 +1,39 @@
-# React + Vite
+# 📱 GadgetHaven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **GadgetHaven** — an interactive e-commerce platform dedicated to gadget enthusiasts! This website allows users to browse, search, and purchase gadgets with ease, offering a streamlined and visually engaging shopping experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Website
+[**GadgetHaven Live Site**](https://example.com) *(Replace with your actual live website link)*
+
+---
+
+## 📄 Project Requirements
+[**Requirement Document**](https://example.com/requirements) *(Replace with the actual requirement document link)*
+
+---
+
+## ⚛️ React Fundamentals Implemented
+
+This project leverages key React fundamentals:
+
+- **React Router**: Routes created with `react-router-dom` for smooth navigation across Home, Product Details, Dashboard, etc.
+- **State Management with Hooks**: `useState` and `useEffect` hooks manage component state and lifecycle events effectively.
+- **Data Fetching with useLoaderData**: Asynchronous data fetching enables dynamic content updates.
+---
+
+## 🛠️ Data Management
+
+- **💾 localStorage**: Stores persistent data (e.g., cart and wishlist), so users’ selections are retained even after page reloads.
+
+---
+
+## 🌟 Key Features
+
+1. **🛒 Interactive Cart and Wishlist**: Products can be added to the cart or wishlist, with data retained for future sessions.
+2. **📊 Real-Time Statistics with Recharts**: Provides graphical insights on product popularity and other statistics using `Recharts`.
+3. **🔔 User Notifications with React Hot Toast**: Real-time notifications for actions like adding items to cart or wishlist, enhancing user engagement.
+4. **📄 Detailed Product Pages**: Each product page offers detailed specs, reviews, pricing, and images, enhancing the shopping experience.
+5. **Product Categories**: The website offers various product categories, such as smartphones, laptops, tablets, etc., making it easy for users to browse and find what they need.
+
