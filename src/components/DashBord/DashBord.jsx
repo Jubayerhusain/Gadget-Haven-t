@@ -219,7 +219,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <button
-                    className="mt-4 btn rounded-2xl text-lg bg-red-500 text-white hover:bg-red-500"
+                    className="mt-4 btn rounded-2xl text-lg bg-purple-500 text-white hover:bg-purple-700"
                     onClick={() => deleteItem(item.id)}
                   >
                     <FaRegTrashAlt />
