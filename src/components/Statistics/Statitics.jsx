@@ -1,8 +1,9 @@
 
+import ReChart from './../ReChart/ReChart';
 function Statistic() {
     return (
         <div>
-            this is statistic container 
+            <ReChart></ReChart>
         </div>
     )
 }
