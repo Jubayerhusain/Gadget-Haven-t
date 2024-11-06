@@ -6,7 +6,7 @@ function ProductCart({ product }) {
 
   return (
     <div>
-      <div className="card bg-base-100 w-96 mx-auto shadow-xl">
+      <div className="card bg-base-100 w-80 mx-auto shadow-xl">
         <figure className="bg-purple-200 p-5">
           <img className="w-48 h-52 rounded-lg " src={img} alt={brand} />
         </figure>

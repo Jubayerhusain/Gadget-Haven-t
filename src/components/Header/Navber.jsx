@@ -25,14 +25,14 @@ function Navbar() {
   const navbarClass = 
   isDashboard? "navbar bg-white py-4 px-14 text-gray-700 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
   isStatistics? "navbar bg-gray-800 py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
-  isAboutUs? "navbar bg-white py-4 px-14 text-gray-700 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
+  isAboutUs? "navbar bg-[#9538E2] py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
   "navbar bg-[#9538E2] py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg";
 
   const getLinkClass = (isActive) => {
     if (isActive) return "font-bold underline";
     if (isDashboard) return "text-gray-700";
     if (isStatistics) return "text-white";
-    if (isAboutUs) return "text-gray-700";
+    if (isAboutUs) return "text-white";
     return "text-white";
   };
 

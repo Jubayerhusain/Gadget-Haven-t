@@ -153,11 +153,11 @@ function Dashboard() {
 
         {currentList.length > 0 ? (
           currentList.map((item) => (
-            <div key={item.id} className="border rounded-md p-4 m-2 shadow-md">
+            <div key={item.id} className="border rounded-3xl p-2 my-10 shadow-md">
               <div>
-                <div className="border-2 rounded-2xl p-8 flex justify-between items-center space-x-4">
+                <div className="border-2 rounded-2xl p-5 flex justify-between items-center space-x-4 bg-purple-200">
                   <div className="flex space-x-4">
-                    <img className="w-52 h-52" src={item.img} alt="" />
+                    <img className="w-44 h-44 rounded-md" src={item.img} alt="" />
                     <div>
                       <h2 className="text-xl font-semibold text-gray-700">
                         {item.brand}

@@ -13,7 +13,7 @@ function AboutUs() {
   return (
     <div>
       <div
-        className="hero min-h-[600px] mt-0 mb-14 rounded-2xl"
+        className="hero min-h-[600px] mt-0 mb-14 rounded-b-2xl"
         style={{
           backgroundImage:
             "url(https://cdn.pixabay.com/photo/2016/11/29/02/07/drone-1866742_960_720.jpg)",

@@ -4,7 +4,7 @@ import Footer from './../Footer/Footer';
 import{ Toaster } from 'react-hot-toast';
 function Layout() {
     return (
-        <div className='max-w-[1640px] mx-auto'>
+        <div className='max-w-[1440px] mx-auto'>
             <Toaster />
             <Navber></Navber>
             <Outlet></Outlet>
