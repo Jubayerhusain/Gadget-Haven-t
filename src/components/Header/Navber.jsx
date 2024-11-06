@@ -19,19 +19,19 @@ function Navbar() {
   }, []);
 
   const isDashboard = pathname === "/dashboard";
-  const isStatistics = pathname === "/Statistics";
+  const isStatistics = pathname === "/statistic";
   const isAboutUs = pathname === "/aboutUs";
 
   const navbarClass = 
   isDashboard? "navbar bg-white py-4 px-14 text-gray-700 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
-  isStatistics? "navbar bg-gray-800 py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
+  isStatistics? "navbar bg-white py-4 px-14 text-gray-700 rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
   isAboutUs? "navbar bg-[#9538E2] py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg":
   "navbar bg-[#9538E2] py-4 px-14 text-white rounded-t-2xl sticky top-0 z-50 backdrop-blur-lg";
 
   const getLinkClass = (isActive) => {
     if (isActive) return "font-bold underline";
     if (isDashboard) return "text-gray-700";
-    if (isStatistics) return "text-white";
+    if (isStatistics) return "text-gray-700";
     if (isAboutUs) return "text-white";
     return "text-white";
   };
@@ -44,7 +44,7 @@ function Navbar() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/Statistics" className={({ isActive }) => getLinkClass(isActive)}>
+        <NavLink to="/statistic" className={({ isActive }) => getLinkClass(isActive)}>
           Statistics
         </NavLink>
       </li>

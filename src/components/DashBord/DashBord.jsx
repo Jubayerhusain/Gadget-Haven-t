@@ -65,7 +65,7 @@ function Dashboard() {
   };
 
   const sortByPrice = () => {
-    const sortedList = [...currentList].sort((a, b) => a.price - b.price);
+    const sortedList = [...currentList].sort((a, b) => b.price - a.price);
     setCurrentList(sortedList);
   };
 

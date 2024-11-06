@@ -18,7 +18,7 @@ function Banner() {
             Shop Now
           </button>
         </div>
-        <div className="absolute top-72 left-[24%]">
+        <div className="absolute top-72 left-[23%]">
           <div className="w-[820px] h-[470px] border-2 bg-white/20 border-white rounded-xl p-6">
             <img
               className="w-full h-full rounded-xl"
