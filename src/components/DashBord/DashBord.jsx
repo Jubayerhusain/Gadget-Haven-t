@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import {
   getStoredProductList,
   getStoredWishList,
   removeCartFromPRoductList,
-  removeCartFromWishList
+  removeCartFromWishList,
 } from "../../utilitis/localStorage";
 import modalimage from "./../../assets/Group.png";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -80,22 +81,27 @@ function Dashboard() {
         0
       );
       setTotalPrice(priceSum);
-      toast.error("Remove Done")
-
+      toast.error("Remove Done");
     } else {
       const updatedWishlist = wishlist.filter((item) => item.id !== itemId);
       setWishlist(updatedWishlist);
       setCurrentList(updatedWishlist);
       removeCartFromWishList(itemId);
-      toast.error("Remove Done")
-
+      toast.error("Remove Done");
     }
   };
-
+  // const handleModalClose = () => {
+  //   setCartList([]); 
+  //   setCurrentList([]); 
+  //   setTotalPrice(0);
+  // };
+ const navigate =  useNavigate();
   const handleModalClose = () => {
-    setCartList([]);
-    setCurrentList([]);
+    cartList.forEach((item) => removeCartFromPRoductList(item.id));
+    setCartList([]); 
+    setCurrentList([]); 
     setTotalPrice(0);
+    navigate("/");
   };
 
   return (
@@ -153,11 +159,18 @@ function Dashboard() {
 
         {currentList.length > 0 ? (
           currentList.map((item) => (
-            <div key={item.id} className="border rounded-3xl p-2 my-10 shadow-md">
+            <div
+              key={item.id}
+              className="border rounded-3xl p-2 my-10 shadow-md"
+            >
               <div>
                 <div className="border-2 rounded-2xl p-5 flex justify-between items-center space-x-4 bg-purple-200">
                   <div className="flex space-x-4">
-                    <img className="w-44 h-44 rounded-md" src={item.img} alt="" />
+                    <img
+                      className="w-44 h-44 rounded-md"
+                      src={item.img}
+                      alt=""
+                    />
                     <div>
                       <h2 className="text-xl font-semibold text-gray-700">
                         {item.brand}
@@ -240,7 +253,7 @@ function Dashboard() {
             <form method="dialog">
               <button
                 className="btn bg-purple-500 text-gray-100 hover:bg-purple-800"
-                onClick={handleModalClose}
+                onClick={() => handleModalClose()}
               >
                 Close
               </button>
